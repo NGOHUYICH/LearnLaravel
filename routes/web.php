@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FormDangNhap;
+use Illuminate\Http\Client\Request;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
@@ -45,3 +46,4 @@ Route::get('/duongdi/{loidi}',function($loidi){
 })->middleware('Test1Middleware');
 
 Route::match(['get','post'],"Dangnhap",[FormDangNhap::class,'HienthiFormLogin'])->name('hienthi');
+
